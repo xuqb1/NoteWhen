@@ -1,0 +1,630 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_NOTEWHEN_DIALOG DIALOGEX 0, 0, 341, 209
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "便条列表"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,7,41,327,140
+    CONTROL         "显示便条",IDC_DISPLAY_NOTE,"Button",BS_AUTOCHECKBOX | 
+                    NOT WS_VISIBLE | WS_TABSTOP,7,191,55,10
+    PUSHBUTTON      "增加",IDC_ADD,96,187,45,14
+    PUSHBUTTON      "删除",IDC_DELETE,144,187,45,14
+    PUSHBUTTON      "计划",IDC_VIEW_CALENDAR,192,187,45,14
+    PUSHBUTTON      "关闭",IDC_CLOSE,240,187,45,14
+    PUSHBUTTON      "帮助",IDC_HELPBTN,289,187,45,14
+    LTEXT           "在列名上双击，可编辑便条的该属性",IDC_STATIC,7,32,287,8
+    EDITTEXT        IDC_SEARCHTXT,7,7,291,18,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "搜索",IDC_SEARCHBUT,304,7,30,18
+END
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 238, 90
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,5,5,20,20
+    LTEXT           "版本号 1.2",IDC_STATIC,154,10,48,8,SS_NOPREFIX
+    LTEXT           "版权所有 ? 2001 Ziff Davis Media, Inc.",IDC_STATIC,30,
+                    24,162,8
+    DEFPUSHBUTTON   "确定",IDOK,95,69,47,12,WS_GROUP
+    LTEXT           "保留所有版权.",IDC_STATIC,30,32,122,8
+    LTEXT           "美语版于2001年7月首次发表于 PC Magazine,.",IDC_STATIC,
+                    30,40,195,8
+    LTEXT           "作者 Steven E. Sipe",IDC_STATIC,30,54,104,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,30,20,200,1
+    CONTROL         133,IDC_STATIC,"Static",SS_BITMAP,29,10,65,10
+END
+
+IDD_MESSAGE_PAGE DIALOG DISCARDABLE  0, 0, 256, 130
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT1,7,18,241,105,ES_AUTOHSCROLL
+    LTEXT           "消息文本",IDC_STATIC,7,7,43,8
+END
+
+IDD_PROPERTIES DIALOG DISCARDABLE  0, 0, 271, 194
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "提醒属性"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,111,173,50,14
+    PUSHBUTTON      "取消",IDCANCEL,164,173,50,14
+    PUSHBUTTON      "帮助",3,217,173,50,14
+END
+
+IDD_SCHEDULE_PAGE DIALOG DISCARDABLE  0, 0, 258, 130
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_WHEN,53,7,80,54,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "计划频率:",IDC_STATIC,7,9,37,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,9,23,
+                    225,1
+    CONTROL         "每",IDC_DAILY_EVERY,"Button",BS_AUTORADIOBUTTON | NOT 
+                    WS_VISIBLE | WS_GROUP,19,31,39,10
+    EDITTEXT        IDC_DAILY_EVERY_NUM,59,29,28,14,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    CONTROL         "Spin1",IDC_DAILY_EVERY_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | NOT WS_VISIBLE,79,29,11,14
+    LTEXT           "天",IDC_DAILY_DAYS,91,31,23,8,NOT WS_VISIBLE
+    CONTROL         "周",IDC_DAILY_WEEKDAYS,"Button",BS_AUTORADIOBUTTON | 
+                    NOT WS_VISIBLE,19,45,50,10
+    LTEXT           "每",IDC_WEEKLY_EVERY,19,31,21,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_WEEKLY_EVERY_NUM,45,28,30,14,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    CONTROL         "Spin1",IDC_WEEKLY_EVERY_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | NOT WS_VISIBLE,67,28,11,14
+    LTEXT           "星期:",IDC_WEEKLY_WEEKS,79,31,41,8,NOT WS_VISIBLE
+    CONTROL         "周日",IDC_WEEKLY_SUNDAY,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_GROUP | WS_TABSTOP,21,47,31,10
+    CONTROL         "周一",IDC_WEEKLY_MONDAY,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,21,57,41,10
+    CONTROL         "周二",IDC_WEEKLY_TUESDAY,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,71,46,43,10
+    CONTROL         "周三",IDC_WEEKLY_WEDNESDAY,"Button",BS_AUTOCHECKBOX | 
+                    NOT WS_VISIBLE | WS_TABSTOP,71,56,54,10
+    CONTROL         "周四",IDC_WEEKLY_THURSDAY,"Button",BS_AUTOCHECKBOX | 
+                    NOT WS_VISIBLE | WS_TABSTOP,129,46,45,10
+    CONTROL         "周五",IDC_WEEKLY_FRIDAY,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,129,56,35,10
+    CONTROL         "周六",IDC_WEEKLY_SATURDAY,"Button",BS_AUTOCHECKBOX | 
+                    NOT WS_VISIBLE | WS_TABSTOP,181,47,44,10
+    CONTROL         "在",IDC_MONTHLY_ON,"Button",BS_AUTORADIOBUTTON | NOT 
+                    WS_VISIBLE,19,31,37,10
+    COMBOBOX        IDC_MONTHLY_COUNT,63,29,62,60,CBS_DROPDOWNLIST | NOT 
+                    WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_MONTHLY_DAY,127,29,99,69,CBS_DROPDOWNLIST | NOT 
+                    WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "在",IDC_MONTHLY_ON_DAY,"Button",BS_AUTORADIOBUTTON | 
+                    NOT WS_VISIBLE,19,46,39,10
+    EDITTEXT        IDC_MONTHLY_DAY_NUM,63,44,28,14,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    CONTROL         "Spin1",IDC_MONTHLY_DAY_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | NOT WS_VISIBLE,87,44,11,14
+    LTEXT           "月:",IDC_MONTHLY_MONTHS,97,46,43,8,NOT WS_VISIBLE
+    CONTROL         "一月",IDC_MONTHLY_JAN,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,25,59,27,10
+    CONTROL         "二月",IDC_MONTHLY_FEB,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,25,68,31,10
+    CONTROL         "三月",IDC_MONTHLY_MAR,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,25,77,31,10
+    CONTROL         "四月",IDC_MONTHLY_APR,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,65,59,27,10
+    CONTROL         "五月",IDC_MONTHLY_MAY,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,65,68,29,10
+    CONTROL         "六月",IDC_MONTHLY_JUN,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,65,77,27,10
+    CONTROL         "七月",IDC_MONTHLY_JUL,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,105,59,32,10
+    CONTROL         "八月",IDC_MONTHLY_AUG,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,105,68,34,10
+    CONTROL         "九月",IDC_MONTHLY_SEP,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,105,77,32,10
+    CONTROL         "十月",IDC_MONTHLY_OCT,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,145,59,27,10
+    CONTROL         "十一月",IDC_MONTHLY_NOV,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,145,68,47,10
+    CONTROL         "十二月",IDC_MONTHLY_DEC,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_TABSTOP,145,77,43,10
+    LTEXT           "开始时间:",IDC_STATIC,7,91,59,8
+    CONTROL         "DateTimePicker2",IDC_START_TIME,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,7,101,72,
+                    15
+    CONTROL         "DateTimePicker1",IDC_START_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,83,101,70,15
+    LTEXT           "开始日期:",IDC_STATIC,83,91,34,8
+    CONTROL         "DateTimePicker1",IDC_END_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_SHOWNONE | WS_DISABLED | WS_TABSTOP,
+                    159,101,70,15
+    LTEXT           "结束日期:",IDC_STATIC,159,91,50,8
+END
+
+IDD_FONTCOLOR DIALOGEX 13, 54, 264, 145
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "字体/颜色"
+FONT 8, "Helv", 0, 0, 0x1
+BEGIN
+    LTEXT           "字体：",1088,6,3,40,9
+    COMBOBOX        1136,6,13,94,54,CBS_SIMPLE | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS | 
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "字体类型:",1089,108,3,44,9
+    COMBOBOX        1137,108,13,64,54,CBS_SIMPLE | CBS_DISABLENOSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "大小:",1090,179,3,30,9
+    COMBOBOX        1138,179,13,32,54,CBS_SIMPLE | CBS_OWNERDRAWFIXED | 
+                    CBS_SORT | CBS_HASSTRINGS | CBS_DISABLENOSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "删除线",1040,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,84,
+                    49,10
+    CONTROL         "下划线",1041,"Button",BS_AUTOCHECKBOX,9,96,51,10
+    GROUPBOX        "示例",1073,108,71,155,42,WS_GROUP
+    CTEXT           "AaBbYyZz",1092,116,80,138,29,SS_NOPREFIX | NOT 
+                    WS_VISIBLE,WS_EX_TRANSPARENT
+    LTEXT           "文本颜色:",1091,5,118,57,9
+    COMBOBOX        1139,5,128,95,100,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_HASSTRINGS | WS_BORDER | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "背景颜色:",1094,108,118,73,9
+    CONTROL         "(选择的颜色)",IDC_BACKGROUND,"Button",BS_OWNERDRAW | 
+                    WS_DISABLED | WS_TABSTOP,110,130,82,10
+    PUSHBUTTON      "...",IDC_COLOR_SELECT,193,128,15,12
+    GROUPBOX        "特殊效果",1072,5,71,95,42,WS_GROUP
+    DEFPUSHBUTTON   "确定",IDOK,219,12,40,14,WS_GROUP
+    PUSHBUTTON      "取消",IDCANCEL,219,29,40,14,WS_GROUP
+    PUSHBUTTON      "应用",1026,219,46,40,15,WS_GROUP
+    PUSHBUTTON      "帮助",1038,246,129,6,6,NOT WS_VISIBLE | WS_GROUP
+    CTEXT           "",1093,255,124,8,13,SS_NOPREFIX | NOT WS_GROUP
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,108,128,
+                    85,13
+END
+
+IDD_WHAT_PAGE DIALOG DISCARDABLE  0, 0, 258, 130
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_DAYS,15,36,18,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_DAYS_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,34,36,11,
+                    14
+    EDITTEXT        IDC_HOURS,49,36,18,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_HOURS_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,68,36,11,
+                    14
+    EDITTEXT        IDC_MINUTES,84,37,18,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_MINUTES_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,103,37,11,14
+    CONTROL         "总是显示便条",IDC_ALWAYS_DISPLAY,"Button",
+                    BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,149,39,77,
+                    10
+    CONTROL         "打开",IDC_ALARM_ENABLED,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,54,79,42,10
+    LTEXT           "音频文件:",IDC_STATIC,12,93,40,8
+    EDITTEXT        IDC_SOUND_FILE,54,91,128,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,184,91,12,14
+    PUSHBUTTON      "试听",IDC_TEST,207,91,37,14
+    LTEXT           "时:",IDC_STATIC,49,25,22,8
+    LTEXT           "分:",IDC_STATIC,84,25,28,8
+    LTEXT           "日:",IDC_STATIC,15,24,19,8
+    GROUPBOX        "根据以下设定提醒我:",IDC_STATIC,7,7,243,58
+    GROUPBOX        "声音提醒",IDC_STATIC,7,69,243,41
+END
+
+IDD_MONTH DIALOGEX 20, 20, 375, 157
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "已设置的任务计划"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "MonthCalendar1",IDC_CALENDAR,"SysMonthCal32",
+                    MCS_DAYSTATE | WS_TABSTOP,7,17,178,112,WS_EX_CLIENTEDGE
+    CONTROL         "List2",IDC_DAY,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | 
+                    WS_BORDER | WS_TABSTOP,190,17,175,112
+    DEFPUSHBUTTON   "关闭",IDOK,202,136,50,14
+    PUSHBUTTON      "计划",IDC_CHANGE,258,136,50,14
+    PUSHBUTTON      "帮助",IDC_HELPBTN,314,136,50,14
+    LTEXT           "粗体显示的日期中有计划",IDC_STATIC,7,7,133,8
+    LTEXT           "每天内容:",IDC_STATIC,189,7,41,8
+END
+
+IDD_TEXT DIALOG DISCARDABLE  0, 0, 243, 140
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "输入文本"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,86,122,50,14
+    PUSHBUTTON      "取消",IDCANCEL,136,122,50,14
+    PUSHBUTTON      "帮助",IDC_HELPBTN,191,122,50,14
+    EDITTEXT        IDC_TEXT,2,2,238,111,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN
+END
+
+IDD_SCHEDULE DIALOG DISCARDABLE  0, 0, 319, 235
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "任务计划属性"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,111,214,50,14
+    PUSHBUTTON      "取消",IDCANCEL,164,214,50,14
+    PUSHBUTTON      "帮助",IDC_HELPBTN,262,214,50,14
+    CONTROL         "取消计划",IDC_ENABLE_NOTIFICATIONS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,218,70,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_NOTEWHEN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 334
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 201
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 231
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 81
+    END
+
+    IDD_MESSAGE_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_PROPERTIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 264
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_SCHEDULE_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_FONTCOLOR, DIALOG
+    BEGIN
+        RIGHTMARGIN, 263
+    END
+
+    IDD_WHAT_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_MONTH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 368
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_TEXT, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 240
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_SCHEDULE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 312
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 228
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\NoteWhen.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_LOGO                BITMAP  DISCARDABLE     "res\\logo.bmp"
+IDB_LISTIMAGES          BITMAP  DISCARDABLE     "res\\listimgs.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_SCHEDULE_PAGE DLGINIT
+BEGIN
+    IDC_WHEN, 0x403, 7, 0
+0xf6bd, 0xbbd2, 0xceb4, "\000" 
+    IDC_WHEN, 0x403, 5, 0
+0xbfc3, 0xeccc, "\000" 
+    IDC_WHEN, 0x403, 5, 0
+0xbfc3, 0xdcd6, "\000" 
+    IDC_WHEN, 0x403, 5, 0
+0xbfc3, 0xc2d4, "\000" 
+    IDC_MONTHLY_COUNT, 0x403, 7, 0
+0xdab5, 0xbbd2, 0xf6b8, "\000" 
+    IDC_MONTHLY_COUNT, 0x403, 7, 0
+0xdab5, 0xfeb6, 0xf6b8, "\000" 
+    IDC_MONTHLY_COUNT, 0x403, 7, 0
+0xdab5, 0xfdc8, 0xf6b8, "\000" 
+    IDC_MONTHLY_COUNT, 0x403, 7, 0
+0xdab5, 0xc4cb, 0xf6b8, "\000" 
+    IDC_MONTHLY_COUNT, 0x403, 5, 0
+0xeed7, 0xf3ba, "\000" 
+    IDC_MONTHLY_DAY, 0x403, 5, 0
+0xdcd6, 0xd5c8, "\000" 
+    IDC_MONTHLY_DAY, 0x403, 5, 0
+0xdcd6, 0xbbd2, "\000" 
+    IDC_MONTHLY_DAY, 0x403, 5, 0
+0xdcd6, 0xfeb6, "\000" 
+    IDC_MONTHLY_DAY, 0x403, 5, 0
+0xdcd6, 0xfdc8, "\000" 
+    IDC_MONTHLY_DAY, 0x403, 5, 0
+0xdcd6, 0xc4cb, "\000" 
+    IDC_MONTHLY_DAY, 0x403, 5, 0
+0xdcd6, 0xe5ce, "\000" 
+    IDC_MONTHLY_DAY, 0x403, 5, 0
+0xdcd6, 0xf9c1, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_TRAYMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&Dummy"
+    BEGIN
+        MENUITEM "增加便条",                    ID_NEW
+        MENUITEM "显示列表",                    ID_NOTELIST
+        MENUITEM "全部置顶",                    ID_BRINGTOTOP
+        MENUITEM "打开提醒",                    ID_ENABLE
+        MENUITEM SEPARATOR
+        MENUITEM "全部显示",                    ID_SHOW_ALL
+        MENUITEM "全部隐藏",                    ID_HIDE_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "可吸附",                      ID_CANSTICK
+        MENUITEM "帮助",                        IDM_HELP
+        MENUITEM "关于",                        IDM_ABOUTBOX
+        MENUITEM SEPARATOR
+        MENUITEM "退出",                        ID_HANDLE_EXIT
+    END
+END
+
+IDR_NOTEMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&Dummy"
+    BEGIN
+        MENUITEM "增加便条",                    ID_NEW
+        MENUITEM "显示列表",                    ID_NOTELIST
+        MENUITEM SEPARATOR
+        MENUITEM "字体/颜色",                   ID_SET_COLORS
+        MENUITEM "任务计划",                    ID_SET_SCHEDULE
+        MENUITEM "置顶显示",                    ID_ALWAYSONTOP
+        MENUITEM SEPARATOR
+        MENUITEM "撤销",                        ID_UNDO
+        MENUITEM "全选",                        ID_SELALL
+        MENUITEM SEPARATOR
+        MENUITEM "剪切",                        ID_CUT
+        MENUITEM "复制",                        ID_COPY
+        MENUITEM "粘贴",                        ID_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "隐藏",                        ID_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "退出",                        ID_HANDLE_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_HAND                CURSOR  DISCARDABLE     "res\\hand.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 NoteWhen..."
+    IDS_SCHEDULE            "任务计划"
+    IDS_WHAT                "提醒"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\NoteWhen.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,0,0
+ PRODUCTVERSION 2,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "NoteWhen\0"
+            VALUE "FileVersion", "2, 0, 0, 0\0"
+            VALUE "InternalName", "NoteWhen\0"
+            VALUE "LegalCopyright", "Copyright (C) 2018 xsoft.\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "NoteWhen.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "NoteWhen Utility\0"
+            VALUE "ProductVersion", "2, 0, 0, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\NoteWhen.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
